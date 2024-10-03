@@ -9,7 +9,7 @@
     </script>
     <script language="JavaScript" src="isi.js"></script>
 
-    
+-------------------------------------------------------------------------------    
 <p>
 <script language="JavaScript">
   document.writeln("<pre>");
@@ -33,40 +33,40 @@
 </script> </p>
 
       
+--------------------------------------------------------------------------------
 
-
-    <p><script language="JavaScript">
-function namaAnda() {
+<p>
+    <script language="JavaScript">
+    function namaAnda() {
     let nama = prompt("Masukkan Nama Anda");
     if (nama != null) {
         alert("Halo " + nama + "!");
+        }
     }
-}
 </script>
 
 <form name="NAMAINPUT">
-  <h1>Memasukkan Data Lewat Prompt</h1>
-  <input type="button" value="Masukkan Nama" onclick="namaAnda()"/>
-</form>
-</p>
+      <h1>Memasukkan Data Lewat Prompt</h1>
+      <input type="button" value="Masukkan Nama" onclick="namaAnda()"/>
+</form></p>
 
 
-
+---------------------------------------------------------------------------------
  
 <p>
-<script language="JavaScript">
-function jumlah() {
-  let bil1 = parseFloat(document.Penghitung.bilangan1.value);
-  if (isNaN(bil1)) {
-    bil1 = 0.0;
-  }
-  let bil2 = parseFloat(document.Penghitung.bilangan2.value);
-  if (isNaN(bil2)) {
-    bil2 = 0.0;
-  }
-  let hasil = bil1 + bil2;
-  console.log("Hasil Penjumlahan = " + hasil);
-} 
+    <script language="JavaScript">
+    function jumlah() {
+      let bil1 = parseFloat(document.Penghitung.bilangan1.value);
+      if (isNaN(bil1)) {
+        bil1 = 0.0;
+      }
+      let bil2 = parseFloat(document.Penghitung.bilangan2.value);
+      if (isNaN(bil2)) {
+        bil2 = 0.0;
+      }
+      let hasil = bil1 + bil2;
+      console.log("Hasil Penjumlahan = " + hasil);
+        } 
 <form name="Penghitung">
   <h1>Memasukkan Data via Form</h1>
   <pre>
@@ -74,7 +74,8 @@ function jumlah() {
   Bilangan Kedua : <input type="text" size="11" name="bilangan2"/>
   </pre>
   <input type="button" value="Jumlahkan" onclick="jumlah()"/>
-</form> </script> </p>
+</form> 
+</script> </p>
 
 
 </body>
