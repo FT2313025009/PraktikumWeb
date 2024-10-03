@@ -1,133 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Recipe Page</title>
-	<style>
-		/* Embedded CSS styles */
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f0f0f0;
-		}
-		
-		.recipe-container {
-			width: 80%;
-			margin: 40px auto;
-			background-color: #fff;
-			padding: 20px;
-			border: 1px solid #ddd;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		}
-		
-		.recipe-title {
-			font-size: 24px;
-			font-weight: bold;
-			color: #333;
-			border-bottom: 2px solid #ccc;
-			padding-bottom: 10px;
-			margin-bottom: 20px;
-		}
-		
-		.recipe-image {
-			width: 100%;
-			height: 200px;
-			object-fit: cover;
-			border-radius: 10px;
-			margin-bottom: 20px;
-		}
-		
-		.recipe-list {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		
-		.recipe-list li {
-			padding: 10px;
-			border-bottom: 1px solid #ccc;
-		}
-		
-		.recipe-list li:last-child {
-			border-bottom: none;
-		}
-		
-		.bahan {
-			background-color: #ffe6cc;
-			padding: 10px;
-			border-radius: 10px;
-		}
-		
-		.cara-membuat {
-			background-color: #ccffe6;
-			padding: 10px;
-			border-radius: 10px;
-		}
-		
-		.cek-button {
-			background-color: #4CAF50;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-		}
-		
-		.cek-button:hover {
-			background-color: #3e8e41;
-		}
-		
-		.cetak-button {
-			background-color: #337ab7;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-		}
-		
-		.cetak-button:hover {
-			background-color: #23527c;
-		}
-		
-		footer {
-			background-color: #333;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-			clear: both;
-		}
-	</style>
+    <title>Resep Makanan</title>
+    <style>
+        /* Embedded CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .recipe-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ff69b4;
+        }
+        .recipe-header h2 {
+            margin: 0;
+        }
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+        .recipe-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .recipe-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .recipe-list li:last-child {
+            border-bottom: none;
+        }
+        .recipe-list li span {
+            font-weight: bold;
+            color: #666;
+        }
+        .bahan {
+            background-color: #ffe6cc;
+            padding: 10px;
+        }
+        .cara-membuat {
+            background-color: #c9f7f5;
+            padding: 10px;
+        }
+        .cek-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cek-button:hover {
+            background-color: #3e8e41;
+        }
+        .cetak-button {
+            background-color: #2196F3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cetak-button:hover {
+            background-color: #1976D2;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
 </head>
 <body>
-	<div class="recipe-container">
-		<h2 class="recipe-title">Resep Makanan: Nasi Goreng</h2>
-		<img src="nasi-goreng.jpg" alt="Nasi Goreng" class="recipe-image">
-		<ul class="recipe-list">
-			<li class="bahan">
-				<h3>Bahan:</h3>
-				<ul>
-					<li>2 cups cooked rice</li>
-					<li>1 tablespoon vegetable oil</li>
-					<li>1 small onion, diced</li>
-					<li>2 cloves garlic, minced</li>
-					<li>1 cup mixed vegetables</li>
-					<li>2 eggs, beaten</li>
-					<li>Salt and pepper to taste</li>
-				</ul>
-			</li>
-			<li class="cara-membuat">
-				<h3>Cara Membuat:</h3>
-				<ul>
-					<li>Heat oil in a wok or large skillet over medium-high heat.</li>
-					<li>Add onion and garlic and stir-fry until they are translucent.</li>
-					<li>Add mixed vegetables and stir-fry for 2-3 minutes.</li>
-					<li>Push the vegetables to one side of the wok.</li>
-					<li>Add a little more oil to the other side of the wok, then pour in the beaten eggs.</li>
-					<li>Scramble the eggs until they are cooked, then mix them with the vegetables.</li>
-					<li>Add cooked rice to the wok and stir-fry until everything is well combined.</li>
-					<li>Season with salt and pepper to taste.</li>
-				</ul>
-			</li>
-		</ul>
-		<button class="cek-button" onclick="console.log('Resep Nasi Goreng')">Cek</button>
-		<button class="cetak-button"
+    <div class="recipe-container">
+        <div class="recipe-header">
+            <h2>Resep Makanan: Roti Goreng</h2>
+        </div>
+        <img src="https://i.ytimg.com/vi/Mms0HXoY03Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDJq0GQhzpFandt0O3lSaeFuG06kQ" alt="Roti Goreng" class="recipe-image">
+        <ul class="recipe-list">
+            <li class="bahan">
+                <span>Bahan:</span>
+                <ul>
+					<li>Tepung terigu 1,5 gelas (220 gram)</li>
+					<li>Maizena 2 sdm</li>
+					<li>Ragi 1 sdt</li>
+					<li>Skm 2 sdm</li>
+					<li>Air setengah gelas</li> 
+					<li>Mentega 1 sdm</li>
+					<li>Sejumput garam</li>
+                </ul>
+            </li>
+            <li class="cara-membuat">
+                <span>Cara Membuat:</span>
+                <ol>
+                    <li>Aduk rata semua bahan, kecuali garam dan mentega</li>
+                    <li>Masukkan garam dan mentega, aduk rata</li>
+                    <li>Ambil adonan, isi dengan isian sesuai selera, bulatkan</li>
+                    <li>Goreng sampai matang</li>
+                </ol>
+            </li>
+        </ul>
+        <button class="cek-button" onclick="console.log('Roti Goreng')">Cek</button>
+        <button class="cetak-button" onclick="window.print()">Cetak</button>
+    </div>
+    <footer>
+        @Copyright Fajar Triadi 2024
+    </footer>
+</body>
+</html>
