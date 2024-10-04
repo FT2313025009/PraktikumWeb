@@ -2,54 +2,58 @@
 <html>
 <head>
     <title>Daftar Menu Restoran</title>
-    <link rel="stylesheet"  href="Style_praktikum5_pertanyaan2.css">
+    <link rel="stylesheet" href="Style_praktikum5_pertanyaan2.css">
 </head>
 <body>
-    <h1 id="judul">Daftar Menu Restoran FAJAR TRIADI</h1>
-    <img src="logo.png" alt="Logo Restoran" id="logo">
-    <nav>
-        <ul>
-            <li><a href="#">MENU</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-        </ul>
-    </nav>
-    <table id="tabel-menu">
-        <thead>
-            <tr>
-                <th title="Nama Makanan">Nama Makanan</th>
-                <th title="Harga Makanan">Harga Makanan</th>
-                <th title="Tautan Makanan">Tautan Makanan</th>
-                <th title="Gambar Makanan">Gambar Makanan</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Nasi Padang</td>
-                <td>Rp. 20.000</td>
-                <td><a href="#">Lihat Detail</a></td>
-                <td><img src="nasi-goreng.jpg" alt="Nasi Goreng" width="100" height="100"></td>
-            </tr>
-            <tr>
-                <td>Kerupuk</td>
-                <td>Rp. 3.000</td>
-                <td><a href="#">Lihat Detail</a></td>
-                <td><img src="mie-goreng.jpg" alt="Mie Goreng" width="100" height="100"></td>
-            </tr>
-            <tr>
-                <td>Ayam POP</td>
-                <td>Rp. 15.000</td>
-                <td><a href="#">Lihat Detail</a></td>
-                <td><img src="gado-gado.jpg" alt="Gado-Gado" width="100" height="100"></td>
-            </tr>
-        </tbody>
-    </table>
-    <form id="form-pesanan">
-        <h2>Pesanan</h2>
-        <input type="checkbox" name="makanan" value="Nasi Padang"> Nasi Padang<br>
-        <input type="checkbox" name="makanan" value="Kerupuk"> Kerupuk<br>
-        <input type="checkbox" name="makanan" value="Ayam POP"> Ayam POP<br>
-        <button id="tombol-pesanan">Pesanan</button>
-    </form>
+    <header>
+        <h1 id="judul">Daftar Menu Restoran FAJAR TRIADI</h1>
+        <img src="logo.png" alt="Logo Restoran" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#">MENU</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table id="tabel-menu">
+            <thead>
+                <tr>
+                    <th title="Nama Makanan">Nama Makanan</th>
+                    <th title="Harga Makanan">Harga Makanan</th>
+                    <th title="Tautan Makanan">Tautan Makanan</th>
+                    <th title="Gambar Makanan">Gambar Makanan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nasi Padang</td>
+                    <td>Rp. 20.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="nasi-goreng.jpg" alt="Nasi Goreng" width="100" height="100"></td>
+                </tr>
+                <tr>
+                    <td>Kerupuk</td>
+                    <td>Rp. 3.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="mie-goreng.jpg" alt="Mie Goreng" width="100" height="100"></td>
+                </tr>
+                <tr>
+                    <td>Ayam POP</td>
+                    <td>Rp. 15.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="gado-gado.jpg" alt="Gado-Gado" width="100" height="100"></td>
+                </tr>
+            </tbody>
+        </table>
+        <form id="form-pesanan">
+            <h2>Pesanan</h2>
+            <input type="checkbox" name="makanan" value="Nasi Padang"> Nasi Padang<br>
+            <input type="checkbox" name="makanan" value="Kerupuk"> Kerupuk<br>
+            <input type="checkbox" name="makanan" value="Ayam POP"> Ayam POP<br>
+            <button id="tombol-pesanan">Pesanan</button>
+        </form>
+    </main>
     <footer>
         @Copyright Fajar Triadi 2024
     </footer>
