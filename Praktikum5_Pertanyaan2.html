@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Daftar Menu Restoran</title>
-	<link rel="stylesheet" href="Style CSS_Praktikum4_Pertanyaan 2.css">
+    <title>Daftar Menu Restoran</title>
+    <link rel="stylesheet" href="Style_praktikum5_pertanyaan2.css">
 </head>
 <body>
-	<header>
-		<h1>Daftar Menu Restoran <span>FAJAR TRIADI</span></h1>
-		<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc6Ne3kFtVqy6T62asqO9o4Oonm-yYFbAs7VA9eqsXJz1PSs0pF8QuX_aHekefyQWyPAYtQ122kjnr8UNH1r-x_5sx04_Yta93QrKmUYzZMMGBxdvq_E4tDDjcyBRLWkL2-N3b9y1CxPacPaGDPA9x7fkg1XFNVOJy2XItjy7b_NGiiinRAeLGr-EfAAg/s320/Fajar%20triadi.png" alt="Logo Restoran">
-		<nav>
-			<a href="#">MENU</a>
-			<a href="about.html">ABOUT</a>
-		</nav>
-	</header>
-	<table border="1" cellpadding="5" cellspacing="0">
-		<thead>
-			<tr>
-				<th title="Nama Makanan">Nama Makanan</th>
-				<th title="Harga Makanan">Harga Makanan</th>
-				<th title="Tautan Makanan">Tautan Makanan</th>
-				<th title="Gambar Makanan">Gambar Makanan</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Nasi Goreng</td>
-				<td>Rp 12.000</td>
-				<td><a href="#">Lihat Detail</a></td>
-				<td><img src="https://asset.kompas.com/crops/vmDriSafVxhO05gc2dSOXby53Mc=/13x7:700x465/750x500/data/photo/2021/09/24/614dc6865eb24.jpg" alt="Nasi Goreng"></td>
-			</tr>
-			<tr>
-				<td>Mie Ayam</td>
-				<td>Rp 13.000</td>
-				<td><a href="#">Lihat Detail</a></td>
-				<td><img src="https://assets.unileversolutions.com/recipes-v2/242756.jpg" alt="Mie Ayam"></td>
-			</tr>
-			<tr>
-				<td>Sate</td>
-				<td>Rp 20.000</td>
-				<td><a href="#">Lihat Detail</a></td>
-				<td><img src="https://www.dapurkobe.co.id/wp-content/uploads/sate-ayam.jpg" alt="Sate"></td>
-			</tr>
-		</tbody>
-	</table>
+    <header>
+        <h1 id="judul">Daftar Menu Restoran FAJAR TRIADI</h1>
+        <img src="logo.png" alt="Logo Restoran" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#">MENU</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <table id="tabel-menu">
+            <thead>
+                <tr>
+                    <th title="Nama Makanan">Nama Makanan</th>
+                    <th title="Harga Makanan">Harga Makanan</th>
+                    <th title="Tautan Makanan">Tautan Makanan</th>
+                    <th title="Gambar Makanan">Gambar Makanan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nasi Padang</td>
+                    <td>Rp. 20.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="nasi-goreng.jpg" alt="Nasi Goreng" width="100" height="100"></td>
+                </tr>
+                <tr>
+                    <td>Kerupuk</td>
+                    <td>Rp. 3.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="mie-goreng.jpg" alt="Mie Goreng" width="100" height="100"></td>
+                </tr>
+                <tr>
+                    <td>Ayam POP</td>
+                    <td>Rp. 15.000</td>
+                    <td><a href="#">Lihat Detail</a></td>
+                    <td><img src="gado-gado.jpg" alt="Gado-Gado" width="100" height="100"></td>
+                </tr>
+            </tbody>
+        </table>
         <form id="form-pesanan">
             <h2>Pesanan</h2>
-            <input type="checkbox" name="makanan" value="Nasi Goreng"> Nasi Goreng<br>
-            <input type="checkbox" name="makanan" value="Mie Ayam"> Mie Ayam<br>
-            <input type="checkbox" name="makanan" value="Sate"> Sate<br>
+            <input type="checkbox" name="makanan" value="Nasi Padang"> Nasi Padang<br>
+            <input type="checkbox" name="makanan" value="Kerupuk"> Kerupuk<br>
+            <input type="checkbox" name="makanan" value="Ayam POP"> Ayam POP<br>
             <button id="tombol-pesanan">Pesanan</button>
         </form>
     </main>
