@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cek Membership</title>
+</head>
+<body>
+    <h1>Cek Membership dan Diskon</h1>
+
+    <script>
+        // Fungsi untuk mengecek membership dan memberikan pesan
+        function cekMembership(nama, memilikiMembership) {
+            if (memilikiMembership) {
+                console.log(nama + " mendapatkan diskon 5%");
+            } else {
+                console.log(nama + " tidak mendapatkan diskon");
+            }
+        }
+
+        // Panggil fungsi untuk masing-masing orang
+        cekMembership("Lena", true);
+        cekMembership("Rio", false);
+    </script>
+</body>
+</html>
