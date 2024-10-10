@@ -108,6 +108,38 @@
       `;
     });
   </script>
+<hr>
+    <h1>Kalkulator Total Pembayaran dan Diskon</h1> //Pertanyaan 4
+  <form>
+    <label for="price">Harga Barang:</label>
+    <input type="number" id="price" name="price"><br><br>
+    <label for="quantity">Jumlah Barang:</label>
+    <input type="number" id="quantity" name="quantity"><br><br>
+    <button type="button" onclick="calculateTotal()">Calculate</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    function calculateTotal() {
+      let price = document.getElementById("price").value;
+      let quantity = document.getElementById("quantity").value;
+      let totalWithoutDiscount = price * quantity;
+      let discount = 0;
+      let totalWithDiscount = totalWithoutDiscount;
+
+      if (quantity > 50) {
+        discount = totalWithoutDiscount * 0.1;
+        totalWithDiscount = totalWithoutDiscount - discount;
+      }
+
+      let result = `
+        <p>Harga Keseluruhan Tanpa Diskon: Rp ${totalWithoutDiscount}</p>
+        <p>Diskon yang Diberikan: Rp ${discount}</p>
+        <p>Harga Setelah Diskon: Rp ${totalWithDiscount}</p>
+      `;
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
 
 </body>
 </html>
