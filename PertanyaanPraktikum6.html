@@ -4,8 +4,7 @@
     <title>Cek Membership</title>
 </head>
 <body>
-    <h1>Cek Membership dan Diskon</h1>
-
+    <h1>Cek Membership dan Diskon</h1> //Pertanyaan 1
     <script>
         // Fungsi untuk mengecek membership dan memberikan pesan
         function cekMembership(nama, memilikiMembership) {
@@ -21,8 +20,41 @@
         cekMembership("Rio", false);
     </script>
 <hr>
-    
-  <h1>Voucher Salon</h1>
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    <h2>Voucher Salon</h2> //Pertanyaan 2
+  <form>
+    <label for="totalVisits">Total visits:</label>
+    <input type="number" id="totalVisits" name="totalVisits">
+    <button type="submit">Check Bonus</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const totalVisits = parseInt(document.querySelector('#totalVisits').value);
+      const couponCount = totalVisits;
+      let bonusMessage = '';
+
+      if (totalVisits >= 10) {
+        bonusMessage = 'You have earned a free visit!';
+      } else {
+        bonusMessage = 'You need ' + (10 - totalVisits) + ' more visits to earn a free visit.';
+      }
+
+      document.querySelector('#result').innerHTML = `
+        <p>Total visits: ${totalVisits}</p>
+        <p>Coupons: ${couponCount}</p>
+        <p>${bonusMessage}</p>
+      `;
+    });
+  </script>
+<hr>
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+    <h3>Voucher Salon</h3> //Pertanyaan 3
   <form>
     <label for="totalVisits">Total visits:</label>
     <input type="number" id="totalVisits" name="totalVisits">
