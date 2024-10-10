@@ -20,39 +20,64 @@
         cekMembership("Rio", false);
     </script>
 <hr>
-    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
 
-    <h2>Voucher Salon</h2> //Pertanyaan 2
-  <form>
-    <label for="totalVisits">Total visits:</label>
-    <input type="number" id="totalVisits" name="totalVisits">
-    <button type="submit">Check Bonus</button>
-  </form>
-  <div id="result"></div>
+    <h2>Kelulusan</h2> //Pertanyaan 2
+     <title>Status Kelulusan Siswa</title>
+    <script>
+        // Fungsi untuk memeriksa status kelulusan siswa
+        function periksaKelulusan() {
+            // Masukkan nama siswa
+            var namaSiswa = prompt("Masukkan nama siswa (pisahkan dengan 			koma):").split(",");
 
-  <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const totalVisits = parseInt(document.querySelector('#totalVisits').value);
-      const couponCount = totalVisits;
-      let bonusMessage = '';
+            // Masukkan nilai siswa
+            var nilaiSiswa = [];
+            for (var i = 0; i < namaSiswa.length; i++) {
+                var nilai = prompt("Masukkan nilai Matematika, Biologi, 				Fisika, dan Kimia untuk " + namaSiswa[i] + " (pisahkan 				dengan koma):").split(",");
+                nilaiSiswa.push(nilai.map(Number));
+            }
 
-      if (totalVisits >= 10) {
-        bonusMessage = 'You have earned a free visit!';
-      } else {
-        bonusMessage = 'You need ' + (10 - totalVisits) + ' more visits to earn a free visit.';
-      }
+            // Standar kelulusan
+            var standarKelulusan = 60;
 
-      document.querySelector('#result').innerHTML = `
-        <p>Total visits: ${totalVisits}</p>
-        <p>Coupons: ${couponCount}</p>
-        <p>${bonusMessage}</p>
-      `;
-    });
-  </script>
+            // Variabel untuk menyimpan status kelulusan
+            var lulus = [];
+            var tidakLulus = [];
+
+            // Periksa status kelulusan setiap siswa
+            for (var i = 0; i < namaSiswa.length; i++) {
+                var nilai = nilaiSiswa[i];
+                var lulusSemua = true;
+
+                for (var j = 0; j < nilai.length; j++) {
+                    if (nilai[j] < standarKelulusan) {
+                        lulusSemua = false;
+                        break;
+                    }
+                }
+
+                if (lulusSemua) {
+                    lulus.push(namaSiswa[i]);
+                } else {
+                    tidakLulus.push(namaSiswa[i]);
+                }
+            }
+
+            // Tampilkan hasil
+            if (lulus.length === namaSiswa.length) {
+                alert("Semua Lulus");
+            } else if (tidakLulus.length === namaSiswa.length) {
+                alert("Semua Tidak Lulus");
+            } else {
+                var hasil = "Lulus: " + lulus.join(", ") + "\nTidak Lulus: " + 			tidakLulus.join(", ");
+                alert(hasil);
+            }
+        }
+
+        // Jalankan fungsi periksaKelulusan
+        periksaKelulusan();
+    </script>
 <hr>
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
     <h3>Voucher Salon</h3> //Pertanyaan 3
   <form>
